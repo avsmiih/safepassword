@@ -24,8 +24,6 @@
  <?php
     if($dig_ref === $sen_ref) {
         include 'revelado.html';
-        echo "$dig_ref <br>";
-        echo $sen_ref;
     } else {
         include 'susto.html';
     }
