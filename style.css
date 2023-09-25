@@ -1,0 +1,46 @@
+body {
+    background-color: silver;
+}
+
+img {
+    position:flex;
+    width: 150px;
+    height: auto;
+    margin-left:565px;
+    margin-top:200px
+}
+
+h2 {
+    font-style: italic;
+    font-family: monospace;
+    margin-left:520px;
+
+    
+}
+
+label {
+    padding-bottom: 2px;
+    margin-left:520px;
+}
+
+input {
+    border-radius: 4px;
+    padding:0
+}
+
+.submit {
+    
+    width: 100px;
+    height: 23px;
+    background-color: #72c6d780;
+    border: none;
+    color:black;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px 1px #def5c269;
+    margin-left:520px;
+}
+
+p {
+    margin-left:520px;
+}
