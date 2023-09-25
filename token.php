@@ -11,6 +11,8 @@ $header = base64_encode($header);
 
 // echo "Header: $header <br><br>";
 
+date_default_timezone_set('America/Sao_Paulo');
+
 $duracao = time() + (3 * 60);
     
 //echo 'Data atual: ' . date('d-m-Y h:i'). '<br> Vencimento: '. date('d-m-Y h:i', $duracao). "<br><br>";
@@ -37,5 +39,7 @@ $signature = base64_encode($signature);
 
 //echo "Signature: $signature <br><br>";
 
-return "$header.$payload.$signature"; 
+$token = "$header.$payload.$signature";
+
+return $token; 
 ?>

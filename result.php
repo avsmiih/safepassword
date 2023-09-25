@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +12,7 @@
         <div>
             <p>
                 <?php
-                $user = 'admin';
-                $password = '123456789';
+                include('conexao.php');
 
                 if (!isset($_POST['usuario'])) {
                     $_POST['usuario'] = null;
@@ -24,23 +22,23 @@
                     $_POST['senha'] = null;
                 }
 
-                //$_POST['usuario'];
-                //$_POST['senha'];
-
-                    if ($_POST['usuario'] === $user && $_POST['senha'] === $password) {
-                        echo '
+                if (in_array($_POST['usuario'], $usuarios) && in_array(hash('sha256', $_POST['senha']), $senhas)) {
+                    echo '
                         <h4> Login realizado com sucesso! <h4>
                         <h5> Este é o seu token, guarde-o com segurança!
                         Ele será requisitado a você em nosso sistema.<h5>';
-                        echo 'Token de aceeso: ' .include('token.php');
-                    } elseif ($_POST['usuario'] != $user || $_POST['senha'] != $password) {
-                        echo 'Senha incorreta!';
-                        include('botao.html');
-                    }
+                    echo 'Token de aceeso: ' .include('token.php');
+                    echo '<br><br>';
+                    include('botao2.html');
+                } elseif (!in_array($_POST['usuario'], $usuarios) || !in_array(hash('sha256', $_POST['senha']), $senhas)) {
+                    echo 'Senha incorreta!';
+                    include('botao.html');
+                }
+                
                 ?>
             </p>
         </div>
-
+    </div>
 </body>
 
 </html>
