@@ -3,7 +3,7 @@
 $hostname = "localhost";
 $bd = "cadastro";
 $usuario = "root";
-$senha = "";
+$senha = "Sucodelim@ao832";
 
 $strcon = mysqli_connect($hostname,$usuario,$senha,$bd);
 if (!$strcon) {
@@ -11,7 +11,7 @@ if (!$strcon) {
 }
 
 $sql_code = "SELECT user, senha FROM usuarios";
-$result = mysqli_query($strcon, $sql_code);
+$result = mysqli_query($strcon, $sql_code) or die(mysqli_error($strcon));
 
 $row = mysqli_fetch_assoc($result);
 

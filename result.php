@@ -29,6 +29,8 @@
                         Ele será requisitado a você em nosso sistema.<h5>';
                     echo 'Token de aceeso: ' .include('token.php');
                     echo '<br><br>';
+                    include('atualizaçao.php');
+                    echo '<br><br>';
                     include('botao2.html');
                 } elseif (!in_array($_POST['usuario'], $usuarios) || !in_array(hash('sha256', $_POST['senha']), $senhas)) {
                     echo 'Senha incorreta!';
