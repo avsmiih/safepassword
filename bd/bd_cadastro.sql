@@ -7,7 +7,7 @@ id int NOT NULL AUTO_INCREMENT,
 `user` varchar(50) NOT NULL UNIQUE,
 senha varchar(256) NOT NULL,
 primary key (id)
-) DEFAULT CHARSET = utf8; 
+) DEFAULT CHARSET = utf8mb3; 
 
 insert into usuarios
 (user, senha)
@@ -19,3 +19,6 @@ select * from usuarios;
 desc usuarios;
 
 select senha from usuarios;
+
+alter table usuarios
+add token varchar(256) NOT NULL;
