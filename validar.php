@@ -41,10 +41,19 @@ if($dados_token->exp > time()) {
         <div>
             <br>
             <form method="post" action="">
-                <label for="token"> Token: </label>
-                <input type="text" name="token" autocomplete="off">
 
+            <div>
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" autocomplete="off" required='true'>
+            </div>
+
+            <div>
+                <label for="token"> Token: </label>
+                <input type="text" name="token" autocomplete="off" required='true'>
+            </div>
+            <div>
                 <input type="submit" name="validar" value="Validar" class="submit">
+            </div>
             </form>
         </div>
         <div>
@@ -75,10 +84,10 @@ if($dados_token->exp > time()) {
                             if($dados_token->exp > time()) {
                                 echo 'Token válido';
                             } else {
-                                echo 'Token invalido';
+                                include('limpar_token.php');
                             }
                         }else {
-                            echo "Token inválido";
+                            echo "Por favor, insira as informações corretamente.";
                         }
                     }
 
