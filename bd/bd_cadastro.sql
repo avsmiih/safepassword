@@ -25,3 +25,6 @@ ADD token varchar(256) NOT NULL;
 
 ALTER TABLE usuarios
 ADD UNIQUE (token);
+
+ALTER TABLE usuarios
+MODIFY token VARCHAR(256) NULL;
