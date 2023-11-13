@@ -9,16 +9,19 @@ senha varchar(256) NOT NULL,
 primary key (id)
 ) DEFAULT CHARSET = utf8mb3; 
 
-insert into usuarios
+INSERT INTO usuarios
 (user, senha)
-values
+VALUES
 ('admin',sha2('123456789',256));
 
-select * from usuarios;
+SELECT * FROM usuarios;
 
-desc usuarios;
+DESC usuarios;
 
-select senha from usuarios;
+SELECT senha FROM usuarios;
 
-alter table usuarios
-add token varchar(256) NOT NULL;
+ALTER TABLE usuarios
+ADD token varchar(256) NOT NULL;
+
+ALTER TABLE usuarios
+ADD UNIQUE (token);
