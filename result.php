@@ -8,7 +8,7 @@
 </head>
 <body>
     <div>
-    <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
+    <img class=result src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
         <div>
             <p>
                 <?php

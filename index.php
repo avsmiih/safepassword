@@ -29,9 +29,12 @@
                 </div>                
             </div>
             <div>
-                <button type="submit" value="login" class="submit"> enviar</button>
-            </div>
+                <button type="submit" value="login" class="submit"> enviar</button>           </div>
         </form>
+        
+    <?php
+    include("botao3.html");
+    ?>
     </div>
 </body>
 </html>
