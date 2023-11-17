@@ -13,27 +13,28 @@
             <p>
                 <?php
                 include('conexao.php');
+                include('token.php');
 
-                if (!isset($_POST['usuario'])) {
-                    $_POST['usuario'] = null;
-                }
 
-                if (!isset($_POST['senha'])) {
-                    $_POST['senha'] = null;
-                }
+                if ($teste == TRUE) {
 
-                if (in_array($_POST['usuario'], $usuarios) && in_array(hash('sha256', $_POST['senha']), $senhas)) {
+                    include('iniciar_sessao.php');
+
                     echo '
-                        <h4> Login realizado com sucesso! <h4>
-                        <h5> Este é o seu token, guarde-o com segurança!
-                        Ele será requisitado a você em nosso sistema.<h5>';
-                    echo 'Token de aceeso: ' .include('token.php');
-                    echo '<br><br>';
+                        <h4> Login realizado com sucesso! Seja bem vindo '. 
+                        $_SESSION['auth'] . '<h4>' .
+                        '<h5> Este é o seu token, guarde-o com segurança!
+                        Ele será requisitado a você em nosso sistema. <h5>' .
+                        '<h5> Token de acesso: ' . $token . '<h5>';
+
+                    $_SESSION['auth'] = $token;
+
                     include('atualizaçao.php');
                     echo '<br><br>';
                     include('botao2.html');
-                } elseif (!in_array($_POST['usuario'], $usuarios) || !in_array(hash('sha256', $_POST['senha']), $senhas)) {
-                    echo 'Senha incorreta!';
+
+                } else {
+                    echo 'login inválido!';
                     include('botao.html');
                 }
                 

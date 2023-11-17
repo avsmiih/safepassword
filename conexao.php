@@ -10,11 +10,17 @@ if (!$strcon) {
     die("Falha na conexão: " . mysqli_connect_error());
 }
 
-$sql_code = "SELECT user, senha FROM usuarios";
+$login = [
+    "user"=> $_POST["usuario"],
+    "password"=> $_POST["senha"],
+];
+$pass = hash("sha256",$login["password"]);
+
+$sql_code = "SELECT user, senha FROM usuarios WHERE user='{$login["user"]}' AND senha='{$pass}'";
 $result = mysqli_query($strcon, $sql_code) or die(mysqli_error($strcon));
 
 $row = mysqli_fetch_assoc($result);
 
-$usuarios[] = $row["user"];
-$senhas[] = $row["senha"];
-
+if (isset($row["user"]) && isset($row["senha"])) {
+    $teste = true;
+ }
