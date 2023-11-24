@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    $_SESSION["user"] = $log_user;
+};
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,32 +20,22 @@
         <div>
             <p>
                 <?php
-                include('conexao.php');
                 include('token.php');
+                include('validar_login.php');
 
+                echo '
+                    <h4> Login realizado com sucesso! Seja bem vindo '. 
+                    $_SESSION['user']. '<h4>' .
+                    '<h5> Este é o seu token, guarde-o com segurança!
+                    Ele será requisitado a você em nosso sistema. <h5>' .
+                    '<h5> Token de acesso: ' . $token . '<h5>';
 
-                if ($teste == TRUE) {
+                $_SESSION['auth_user'] = $token;
 
-                    include('iniciar_sessao.php');
+                include('atualizaçao.php');
+                echo '<br><br>';
+                include('botao2.html');
 
-                    echo '
-                        <h4> Login realizado com sucesso! Seja bem vindo '. 
-                        $_SESSION['auth'] . '<h4>' .
-                        '<h5> Este é o seu token, guarde-o com segurança!
-                        Ele será requisitado a você em nosso sistema. <h5>' .
-                        '<h5> Token de acesso: ' . $token . '<h5>';
-
-                    $_SESSION['auth'] = $token;
-
-                    include('atualizaçao.php');
-                    echo '<br><br>';
-                    include('botao2.html');
-
-                } else {
-                    echo 'login inválido!';
-                    include('botao.html');
-                }
-                
                 ?>
             </p>
         </div>

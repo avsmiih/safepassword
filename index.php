@@ -10,7 +10,7 @@
     <div>
         <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
         
-        <form action="conexao.php" method="post">
+        <form action="validar_login.php" method="post">
             <div>
                 <h2> login </h2>
             </div>
