@@ -33,7 +33,8 @@ if($dados_token->exp > time()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Validação de Token</title>
+    <link rel="shortcut icon" type="imagex/png" href="icone/sistema-seguro.ico">
+    <title>Acesso - Sistema Seguro</title>
 </head>
 <body>
     <div>
@@ -52,14 +53,16 @@ if($dados_token->exp > time()) {
                 <input type="text" name="token" autocomplete="off" required='true'>
             </div>
             <div>
-                <input type="submit" name="validar" value="Validar" class="submit">
+                <input type="submit" name="validar" value="Acessar" class="submit">
             </div>
             </form>
         </div>
         <div>
             <p> 
                 <?php
-                    
+                    include("botao.html");
+                    echo('<br>');
+
                     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
                     if (!empty($dados['validar'])) {
@@ -82,7 +85,7 @@ if($dados_token->exp > time()) {
                             $dados_token = json_decode($dados_token);
                             
                             if($dados_token->exp > time()) {
-                                echo 'Token válido';
+                                header("Location:telas_sistema/menu_sistema.html");
                             } else {
                                 include('limpar_token.php');
                             }

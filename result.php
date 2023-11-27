@@ -12,7 +12,8 @@ if (!isset($_SESSION["user"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sistema de Login</title>
+    <link rel="shortcut icon" type="imagex/png" href="icone/sistema-seguro.ico">
+    <title>Credenciamento - Sistema Seguro</title>
 </head>
 <body>
     <div>
