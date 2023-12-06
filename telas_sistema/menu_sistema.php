@@ -43,8 +43,8 @@ session_start();
             <h1 id="title-h1">Sistema seguro - ATI</h1>
 
             <div id="div-table">
-                <table>
-                    <thead>
+                <table id="table">
+                    <thead id="thead">
                         <tr>
                             <th>NUMERODO</th>
                             <th>RAÇACOR</th>
@@ -53,21 +53,8 @@ session_start();
                             <th>PESO</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>  
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+
+                    <tbody id="tbody">                       
                     </tbody>
 
                 </table>
@@ -78,4 +65,80 @@ session_start();
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    const Pregistros =document.getElementById("Pregistros")
+    const Uregistros =document.getElementById('Uregistros')
+    const tbody = document.getElementById("tbody")
+    const config = document.querySelector('#gear')
+    const options =document.getElementById('options')
+
+    Pregistros.addEventListener('change', async ()=> {
+        tbody.innerHTML = ''
+        try {
+            const response = await fetch("../dados_sistema/cem_primeiros.json")
+            const data = await response.json()
+
+            for(let dado of data) {
+                const newLine = tbody.insertRow()
+
+                const newDataNumerodo = newLine.insertCell()
+                newDataNumerodo.innerHTML = dado.numerodo
+
+                const newDataRacacor = newLine.insertCell()
+                newDataRacacor.innerHTML = dado.racacor
+
+                const newDataIdade = newLine.insertCell()
+                newDataIdade.innerHTML = dado.idade
+
+                const newDataSexo = newLine.insertCell()
+                newDataSexo.innerHTML = dado.sexo
+
+                const newDataPeso = newLine.insertCell()
+                newDataPeso.innerHTML = dado.peso
+            }
+        } catch (error) {
+            alert('Token invalido! \n por favor retorne a pagina de login')
+        }
+    })
+
+    Uregistros.addEventListener("change", async ()=> {
+        tbody.innerHTML = ''
+
+        try {
+            const response = await fetch("../dados_sistema/cem_ultimos.json")
+            const data = await response.json()
+
+            for(let dado of data) {
+                const newLine = tbody.insertRow()
+
+                const newDataNumerodo = newLine.insertCell()
+                newDataNumerodo.innerHTML = dado.numerodo
+
+                const newDataRacacor = newLine.insertCell()
+                newDataRacacor.innerHTML = dado.racacor
+
+                const newDataIdade = newLine.insertCell()
+                newDataIdade.innerHTML = dado.idade
+
+                const newDataSexo = newLine.insertCell()
+                newDataSexo.innerHTML = dado.sexo
+
+                const newDataPeso = newLine.insertCell()
+                newDataPeso.innerHTML = dado.peso
+            }
+        } catch (error) {
+            alert('Token invalido! \n por favor retorne a pagina de login')
+        }
+        
+    })
+
+    config.addEventListener('click', ()=> {
+        config.style.transform = 'rotate(100deg)'
+        config.style.transition = '1s'
+        options.style.display = 'block'
+    })
+
+        
+</script>
 </html>

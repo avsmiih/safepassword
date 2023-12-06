@@ -17,6 +17,7 @@ main{
 .left{
     min-width: 230px;
     height: 250%;
+    max-width: 250px;
     background-color: #90C4CE;
 }
 header{
@@ -88,9 +89,15 @@ th{
     padding: 20px;
     border: 1px solid rgb(0, 0, 0);
     box-shadow:0px 0px 0px 1px black inset;
+    
 }
 td{
     background-color: #D9D9D9;
     border: 1px solid rgb(0, 0, 0);
     box-shadow:0px 0px 0px 1px black inset;
+    padding: 10px;
+}
+#options{
+    display: none;
+    
 }
