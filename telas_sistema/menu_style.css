@@ -16,7 +16,7 @@ main{
 }
 .left{
     min-width: 230px;
-    height: 250%;
+    min-height: 100%;
     max-width: 250px;
     background-color: #90C4CE;
 }
@@ -61,7 +61,7 @@ img{
 }
 .right{
     width: 100%;
-    height: 250%;
+    min-height: 100%;
     /* border: 3px solid blue; */
     background-color: #C0C0C0;
 }
@@ -99,5 +99,23 @@ td{
 }
 #options{
     display: none;
-    
+}
+
+button {
+    background-color: #4d73ff7d;
+    border: none;
+    margin: 2px 0 10px 2px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px 1px #cfc2f569;
+}
+#container-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+#gear .active{
+    /* transform: rotate(100deg);
+    transition: 0.5s; */
+
 }

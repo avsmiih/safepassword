@@ -29,13 +29,15 @@ session_start();
                     <input type="radio" id="Pregistros" name="registros">
                     <label for="">primeiros registros</label>
                 </div>
-
                 <div class="option">
                     <input type="radio" id="Uregistros" name="registros">
                     <label for="">ultimos registros</label>
                 </div>
-
             </div>
+
+                <div id="container-button">
+                    <?php include ("botao_sistema.html");?>
+                </div>
         </section>
 
         <section class="right">
@@ -134,9 +136,23 @@ session_start();
     })
 
     config.addEventListener('click', ()=> {
-        config.style.transform = 'rotate(100deg)'
-        config.style.transition = '1s'
-        options.style.display = 'block'
+        // config.style.transform = 'rotate(100deg)'
+        // config.style.transition = '1s'
+        // options.style.display = 'block'
+
+        config.classList.toggle('active')
+
+        if(config.classList.contains('active')) {
+            options.style.display = "block"
+            config.style.transform = 'rotate(100deg)'
+            config.style.transition = '0.5s'
+            
+        }else{
+            options.style.display = 'none'
+            config.style.transform = 'rotate(-70deg)'
+            config.style.transition = '0.5s'
+
+        }
     })
 
         
