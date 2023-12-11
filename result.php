@@ -16,7 +16,7 @@ if (!isset($_SESSION["user"])) {
     <title>Credenciamento - Sistema Seguro</title>
 </head>
 <body>
-    <div>
+    <div id="login">
     <img class=result src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
         <div>
             <p>
@@ -36,6 +36,7 @@ if (!isset($_SESSION["user"])) {
                 include('atualizaçao.php');
                 echo '<br><br>';
                 include('botao2.html');
+                include('botao4.html');
 
                 ?>
             </p>

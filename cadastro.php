@@ -8,7 +8,7 @@
     <title>Cadastro - Sistema Seguro</title>
 </head>
 <body>
-    <div>
+    <div id="login">
         <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
         
         <form action="" method="post">
@@ -58,13 +58,23 @@
 
     include ("conexao.php");
 
-    if (!isset($_POST['usuario'])) {
+    if (!isset($_POST['usuario']) && !isset($_POST['senha'])) {
         $_POST['usuario'] = '';
-    }
-
-    if (!isset($_POST['senha'])) {
         $_POST['senha'] = '';
     }
+
+    if (!isset($_POST['email']) && !isset($_POST['email2'])) {
+        $_POST['email'] = '';
+        $_POST['email2'] = '';
+    }
+
+    $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
+    $email2 = filter_var($_POST["email2"], FILTER_VALIDATE_EMAIL);
+
+    if ($email && $email2 == false && $_POST["email"] && $_POST["email2"] != "") {
+        echo "email inválido";
+    };
+
 
     if ($_POST['usuario'] !== '' && $_POST['senha'] !== '') {
         
@@ -74,8 +84,10 @@
                 echo "Cadastro realizado com sucesso.";
                 header('Location:index.php');
             };
-        } else {
+        } elseif ($_POST['senha'] != $_POST['senha2']) {
             echo "As senhas não coincidem.";
+        } elseif ($_POST['email'] != $_POST['email2']) {
+            echo "Os emails não coincidem.";
         }
     }
 

@@ -37,7 +37,7 @@ if($dados_token->exp > time()) {
     <title>Acesso - Sistema Seguro</title>
 </head>
 <body>
-    <div>
+    <div id="login">
         <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
         <div>
             <br>
@@ -85,7 +85,7 @@ if($dados_token->exp > time()) {
                             $dados_token = json_decode($dados_token);
                             
                             if($dados_token->exp > time()) {
-                                header("Location:telas_sistema/menu_sistema.html");
+                                header("Location:telas_sistema/menu_sistema.php");
                             } else {
                                 include('limpar_token.php');
                             }

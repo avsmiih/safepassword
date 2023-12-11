@@ -12,9 +12,9 @@ while($row2 = mysqli_fetch_array($result2)){
     $dados[] = [
         "numerodo"  => $row2["NUMERODO"],
         "racacor"   => $row2["RACACOR"],
-        "idade"     => $row3["IDADE"],
-        "sexo"      => $row3["SEXO"],
-        "peso"      => $row3["PESO"]
+        "idade"     => $row2["IDADE"],
+        "sexo"      => $row2["SEXO"],
+        "peso"      => $row2["PESO"]
     ];
 };
 
