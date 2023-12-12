@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION["user"])) {
+    header('Location:tela_erro.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +11,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="menu_style.css">
-    <link rel="shortcut icon" type="imagex/png" href="../icone/sistema-seguro.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../imagens/sistema-seguro.ico">
     <title>Menu - Sistema Seguro</title>
 </head>
 <body>
