@@ -33,7 +33,7 @@ if($dados_token->exp > time()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="icone/sistema-seguro.ico">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/sistema-seguro.ico">
     <title>Acesso - Sistema Seguro</title>
 </head>
 <body>
@@ -90,7 +90,7 @@ if($dados_token->exp > time()) {
                                 include('limpar_token.php');
                             }
                         }else {
-                            echo "Por favor, insira as informações corretamente.";
+                            header('Location:telas_sistema/tela_erro.php');;
                         }
                     }
 

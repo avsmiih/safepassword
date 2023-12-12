@@ -98,3 +98,15 @@ div {
 #login {
     padding: 30px;
 }
+
+#error {
+    display:flex;
+    width: 30%;
+    height: auto;
+    align-items:center;
+    margin-bottom: 2%;
+}
+
+#button-error {
+    margin-top: 2%;
+}

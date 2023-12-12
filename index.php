@@ -1,10 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="icone/sistema-seguro.ico">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/sistema-seguro.ico">
     <title>Login - Sistema Seguro</title>
 </head>
 <body>

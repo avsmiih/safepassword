@@ -1,28 +1,25 @@
 <?php
-session_start();
-
-if (!isset($_SESSION["user"])) {
-    $_SESSION["user"] = $log_user;
-};
+if(!isset($_SESSION)) {
+    session_start();
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="imagex/png" href="icone/sistema-seguro.ico">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/sistema-seguro.ico">
     <title>Credenciamento - Sistema Seguro</title>
 </head>
 <body>
     <div id="login">
     <img class=result src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
+
         <div>
             <p>
                 <?php
                 include('token.php');
-                include('validar_login.php');
 
                 echo '
                     <h4> Login realizado com sucesso! Seja bem vindo '. 
