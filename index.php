@@ -17,7 +17,7 @@ session_start();
             <img src="imagens/governo.jpeg" alt="imagem" class="img">
         </div>
 
-        <form id="form">
+        <form id="form" action="validar_login.php" method="post">
             <section id="login">
                 <ion-icon name="person-outline" class="icon-login"></ion-icon>
                 <input type="text" name="Input-login" id="Input-login" placeholder="Login">
