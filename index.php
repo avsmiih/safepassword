@@ -20,12 +20,12 @@ session_start();
         <form id="form" action="validar_login.php" method="post">
             <section id="login">
                 <ion-icon name="person-outline" class="icon-login"></ion-icon>
-                <input type="text" name="usuario" id="Input-login" placeholder="Login">
+                <input type="text" name="usuario" id="Input-login" placeholder="Login" autocomplete="off" required='true'>
             </section>
 
             <section id="password">
                 <ion-icon name="key-outline" class="icon-password"></ion-icon>
-                <input type="password" name="senha" id="Input-password" placeholder="Senha">
+                <input type="password" name="senha" id="Input-password" placeholder="Senha" autocomplete="off" required='true'>
             </section>
 
             <button type="submit" id="button-submit">
