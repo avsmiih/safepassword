@@ -16,7 +16,7 @@
         <form id="form">
             <section id="user" class="section">
                 <ion-icon name="person-outline" class="icon"></ion-icon>
-                <input type="text" name="Input-user" id="Input-user" placeholder="Usuário" class="class-input" autocomplete="off">
+                <input type="text" name="usuario" id="Input-user" placeholder="Usuário" class="class-input" autocomplete="off">
             </section>
 
             <div id="groo">
@@ -28,18 +28,18 @@
                     </section>
                     <section id="email-confirm" class="section">
                         <ion-icon name="document-attach-outline" class="icon"></ion-icon>
-                        <input type="email" name="Input-email-confirm" id="Input-email-confirm" placeholder="Confirme seu email" class="class-input" autocomplete="off">
+                        <input type="email" name="email2" id="Input-email-confirm" placeholder="Confirme seu email" class="class-input" autocomplete="off">
                     </section>
                 </div>
 
                 <div id="groo-senha">
                     <section id="password" class="section">
                         <ion-icon name="key-outline" class="icon"></ion-icon>
-                        <input type="password" name="Input-password" id="icon-password" placeholder="Senha" class="class-input" autocomplete="off" max="16" min="8">
+                        <input type="password" name="senha" id="icon-password" placeholder="Senha" class="class-input" autocomplete="off" max="16" min="8">
                     </section>
                     <section id="password-confirm" class="section">
                         <ion-icon name="key-outline" class="icon"></ion-icon>
-                        <input type="password" name="Input-password-confirm" id="icon-password-confirm" placeholder="Confirme sua senha" class="class-input" autocomplete="off" max="16" min="8">
+                        <input type="password" name="senha2" id="icon-password-confirm" placeholder="Confirme sua senha" class="class-input" autocomplete="off" max="16" min="8">
                     </section>
                 </div>
 
