@@ -1,60 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="cadastro.css">
     <link rel="shortcut icon" type="imagex/png" href="imagens/sistema-seguro.ico">
-    <title>Cadastro - Sistema Seguro</title>
 </head>
 <body>
-    <div id="login">
-        <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
-        
-        <form action="" method="post">
-            <div>
-                <h2> cadastro </h2>
+    <main>
+        <div id="imagem">
+            <img src="image 1 (1).png" alt="imagem" class="imagem">
+        </div>
+
+        <form id="form">
+            <section id="user" class="section">
+                <ion-icon name="person-outline" class="icon"></ion-icon>
+                <input type="text" name="Input-user" id="Input-user" placeholder="Usuário" class="class-input" autocomplete="off">
+            </section>
+
+            <div id="groo">
+
+                <div id="groo-email">
+                    <section id="email" class="section">
+                        <ion-icon name="document-attach-outline" class="icon"></ion-icon>
+                        <input type="email" name="Input-email" id="Input-email" placeholder="Email" class="class-input" autocomplete="off">
+                    </section>
+                    <section id="email-confirm" class="section">
+                        <ion-icon name="document-attach-outline" class="icon"></ion-icon>
+                        <input type="email" name="Input-email-confirm" id="Input-email-confirm" placeholder="Confirme seu email" class="class-input" autocomplete="off">
+                    </section>
+                </div>
+
+                <div id="groo-senha">
+                    <section id="password" class="section">
+                        <ion-icon name="key-outline" class="icon"></ion-icon>
+                        <input type="password" name="Input-password" id="icon-password" placeholder="Senha" class="class-input" autocomplete="off" max="16" min="8">
+                    </section>
+                    <section id="password-confirm" class="section">
+                        <ion-icon name="key-outline" class="icon"></ion-icon>
+                        <input type="password" name="Input-password-confirm" id="icon-password-confirm" placeholder="Confirme sua senha" class="class-input" autocomplete="off" max="16" min="8">
+                    </section>
+                </div>
+
             </div>
-            <div>
-                <div>
-                    <label for="usuario">Usuário:</label>
-                    
-                    <input type="text" name="usuario" autocomplete="off" required='true'>
 
-                </div>
-                <div>
-                    <label for="password">Senha:</label>
-
-                    <input type="password" name="senha" autocomplete="off" required='true'>
-
-                </div>
-                <div>
-                    <label for="password">Confirme sua senha:</label>
-
-                    <input type="password" name="senha2" autocomplete="off" required='true'>
-
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-
-                    <input type="email" name="email" autocomplete="off" required='true'>
-
-                </div>
-                <div>
-                    <label for="email">Confirme seu email:</label>
-
-                    <input type="email" name="email2" autocomplete="off" required='true'>
-
-                </div>
-            </div>
-            <div>
-                <button type="submit" value="cadastro" class="submit"> cadastrar</button>
-                
-            </div>
+            <button id="button-submit">
+                <ion-icon name="enter-outline" class="icon-submit"></ion-icon>
+                Entrar
+            </button>
         </form>
-    </div>
+    </main>
 
-    <?php
+     <?php
 
     include ("conexao.php");
 
@@ -92,8 +91,12 @@
     }
 
     ?>
+    
 </body>
-<script src="cadastro.js">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="cadastro.js">
     
 </script>
 </html>
