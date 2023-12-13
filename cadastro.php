@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +10,7 @@
 <body>
     <main>
         <div id="imagem">
-            <img src="image 1 (1).png" alt="imagem" class="imagem">
+            <img src="imagens/governo.jpeg" alt="imagem" class="imagem">
         </div>
 
         <form id="form">
@@ -48,7 +47,7 @@
 
             <button id="button-submit">
                 <ion-icon name="enter-outline" class="icon-submit"></ion-icon>
-                Entrar
+                Enviar
             </button>
         </form>
     </main>
