@@ -3,46 +3,43 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" type="imagex/png" href="imagens/sistema-seguro.ico">
-    <title>Login - Sistema Seguro</title>
 </head>
 <body>
-    <div id="login">
-        <img src="https://www.ma.gov.br/assets/images/brand/gov__ma.png">
-        
-        <form action="validar_login.php" method="post">
-            <div>
-                <h2> login </h2>
-            </div>
-            <div>
-                <div>
-                    <label for="usuario">Usuário:</label>
-                    
-                    <input type="text" name="usuario" autocomplete="off" required='true'>
+    <main>
+        <div id="imagem">
+            <img src="image 1 (1).png" alt="imagem" class="img">
+        </div>
 
-                </div>
-                <div>
-                    <label for="password">Senha:</label>
+        <form id="form">
+            <section id="login">
+                <ion-icon name="person-outline" class="icon-login"></ion-icon>
+                <input type="text" name="Input-login" id="Input-login" placeholder="Login">
+            </section>
 
-                    <input type="password" name="senha" autocomplete="off" required='true'>
+            <section id="password">
+                <ion-icon name="key-outline" class="icon-password"></ion-icon>
+                <input type="password" name="Input-password" id="Input-password" placeholder="Senha">
+            </section>
 
-                </div>                
-            </div>
-            <div>
-                <button type="submit" value="login" class="submit"> enviar</button>           </div>
+            <button id="button-submit">
+                <ion-icon name="enter-outline" class="icon-submit"></ion-icon>
+                Entra
+            </button>
         </form>
-        
-    <?php
-    include("botao3.html");
-    ?>
-    </div>
-    <script src="login.js">
-    
-</script>
+
+         <?php
+            include("botao3.html");
+            ?>
+    </main>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="login.js"></script>
 </html>
