@@ -14,7 +14,7 @@ session_start();
 <body>
     <main>
         <div id="imagem">
-            <img src="image 1 (1).png" alt="imagem" class="img">
+            <img src="imagens/governo.jpeg" alt="imagem" class="img">
         </div>
 
         <form id="form">

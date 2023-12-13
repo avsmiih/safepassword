@@ -31,6 +31,7 @@ main{
 .img{
     width: 100%;
     height: 100%;
+    mix-blend-mode: color-burn;
 }
 form{
     /* border: 2px solid green; */
@@ -84,7 +85,9 @@ form{
 .icon-password{
     font-size: 2em;
 }
-
+#button-redirection {
+    background-color: #7F62F2;
+}
 #button-submit{
     width: 100%;
     background-color: #7F62F2;
