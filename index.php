@@ -28,7 +28,7 @@ session_start();
                 <input type="password" name="Input-password" id="Input-password" placeholder="Senha">
             </section>
 
-            <button id="button-submit">
+            <button type="submit" id="button-submit">
                 <ion-icon name="enter-outline" class="icon-submit"></ion-icon>
                 Entra
             </button>
